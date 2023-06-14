@@ -1,0 +1,25 @@
+{% extends 'main/layout.html' %}
+
+{% block library %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+{% endblock %}
+
+{% block title %}
+    Парсинг целевого сайта
+{% endblock %}
+
+{% block content %}
+    <h5>Парсинг страниц может занять некоторое время</h5>
+    <p> Идет парсинг страниц <i class="fas fa-spinner fa-spin"></i></p> 
+    <button style="width: 220px;" class="btn btn-warning"><a href="{% url 'home' %}">На главную страницу</a></button>
+    <script>
+      setTimeout(function() {
+        location.reload();
+      }, 3000);
+    </script>
+{% endblock %}
+
+{% block myscript %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+{% endblock %}
+

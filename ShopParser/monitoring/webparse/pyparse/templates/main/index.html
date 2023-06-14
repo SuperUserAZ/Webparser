@@ -1,0 +1,11 @@
+{% extends 'main/layout.html' %}
+{% block title %}
+    Главная страница 
+{% endblock %}
+
+{% block content %}
+    <h5>Парсинг страниц может занять некторое время</h5>
+    <button style="width: 150px;" class="btn btn-warning"><a href="http://127.0.0.1:8000/admin">Админ панель</a></button>
+    <button style="width: 150px;" class="btn btn-warning"><a href="{% url 'parse' %}">Парсинг</a></button>
+{% endblock %}
+
